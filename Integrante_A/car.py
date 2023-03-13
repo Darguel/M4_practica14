@@ -7,7 +7,7 @@ class car:
 
 
     def getMarca(self):
-        return self.maraca
+        return self.marca
 
     def setMarca(self, marca):
         self.marca = marca
