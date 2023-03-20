@@ -1,5 +1,5 @@
 class book:
-    def __int__(self, autor, volumen, numHojas, tapa, genero, publicacion):
+    def __init__(self, autor, volumen, numHojas, tapa, genero, publicacion):
         self.autor = autor
         self.volumen = volumen
         self.numHojas = numHojas

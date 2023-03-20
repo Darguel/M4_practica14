@@ -4,6 +4,8 @@ from integrante_B.animal import animal
 from integrante_B.cat import gato
 from Integrante_A.book import book
 from Integrante_A.car import car
+from integrante_B.funciones_b import *
+
 books = [
     book("Jose Luis", "2", "150", "dura", "accion", "2001"),
     book("Pepito Rodriges", "4", "200", "blanda", "ficcion", "2003"),
@@ -23,22 +25,22 @@ cars = [
 car_list = [car.to_dict() for car in cars]
 
 animals = [
-    animal("gato", "2", "mamifero", "felino", "4", "si"),
-    animal("perro", "3", "mamifero", "canino", "4", "si"),
-    animal("lobo", "1", "mamifero", "canino", "4", "si"),
-    animal("tigre", "5", "mamifero", "felino", "4", "si"),
-    animal("leon", "4", "mamifero", "felino", "4", "si")
+    animal("gato", "2", "mamifero", "felino", "4", "si","1"),
+    animal("perro", "3", "mamifero", "canino", "4", "si","2"),
+    animal("lobo", "1", "mamifero", "canino", "4", "si","3"),
+    animal("tigre", "5", "mamifero", "felino", "4", "si","4"),
+    animal("leon", "4", "mamifero", "felino", "4", "si","5")
 ]
 
 animal_list = [animal.to_dict() for animal in animals]
 
 
 gatos = [
-    gato("michi","2","23","Abisinio"),
-    gato("rocky","4","30","Asiático"),
-    gato("chispas","5","35","Balinés"),
-    gato("bigotes","4","29","Bengalí"),
-    gato("zarpitas","1","20","Azul ruso")
+    gato("michi","2","23","Abisinio","1"),
+    gato("rocky","4","30","Asiático","2"),
+    gato("chispas","5","35","Balinés","3"),
+    gato("bigotes","4","29","Bengalí","4"),
+    gato("zarpitas","1","20","Azul ruso","5")
 ]
 
 gato_list = [gato.to_dict() for gato in gatos]
@@ -46,7 +48,10 @@ gato_list = [gato.to_dict() for gato in gatos]
 
 data = {"animals":animal_list, "gatos":gato_list}
 data2 = {"books":book_list, "cars":car_list}
+
 with open("jsonAPI/integrante_B.json",'w') as file:
     json.dump(data, file)
-with open("jsonAPI/animals.json",'w') as file:
-    json.dump(data, file)
+with open("jsonAPI/integrante_A.json",'w') as file:
+    json.dump(data2, file)
+
+getCat()

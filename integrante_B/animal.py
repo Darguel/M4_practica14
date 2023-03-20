@@ -1,11 +1,17 @@
 class animal:
-    def __init__(self, nombre, edad, reproduccion, tipo, patas, cola):
+    def __init__(self, nombre, edad, reproduccion, tipo, patas, cola, id):
         self.nombre = nombre
         self.edad = edad
         self.reproduccion = reproduccion
         self.tipo = tipo
         self.patas = patas
         self.cola = cola
+        self.id = id
+    def getId(self):
+        return self.id
+
+    def setId(self, id):
+        self.id = id
 
     def getNombre(self):
         return self.nombre

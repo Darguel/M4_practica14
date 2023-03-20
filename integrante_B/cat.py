@@ -1,9 +1,16 @@
 class gato:
-    def __init__(self, nombre, edad, peso, raza):
+    def __init__(self, nombre, edad, peso, raza, id):
         self.nombre = nombre
         self.edad = edad
         self.peso = peso
         self.raza = raza
+        self.id = id
+
+    def getId(self):
+        return self.id
+
+    def setId(self, id):
+        self.id = id
 
     def getNombre(self):
         return self.nombre
