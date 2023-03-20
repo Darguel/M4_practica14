@@ -46,7 +46,8 @@ gato_list = [gato.to_dict() for gato in gatos]
 
 data = {"animals":animal_list, "gatos":gato_list}
 data2 = {"books":book_list, "cars":car_list}
+
 with open("jsonAPI/integrante_B.json",'w') as file:
     json.dump(data, file)
-with open("jsonAPI/animals.json",'w') as file:
-    json.dump(data, file)
+with open("jsonAPI/integrante_A.json",'w') as file:
+    json.dump(data2, file)
